@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Thông tin cá nhân</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="students-info.css">
+<style>
+    #uploadImage {
+        display: none;
+    }
+</style>
+</head>
+<body>
+    <div class="container-xl px-4 mt-4">
+    <hr class="mt-0 mb-4">
+        <div class="row">
+            <div class="col-xl-4">
+                <div class="card mb-4 mb-xl-0">
+                    <div class="card-header">Avatar cá nhân</div>
+                    <div class="card-body text-center">
+                        <img class="img-account-profile rounded-circle mb-2" id="avatar" src="unnamed.jpg" alt>
+                        <div class="small font-italic text-muted mb-4">JPG or PNG no larger than 5 MB</div>
+                        <button class="btn btn-primary" type="button" onclick="document.getElementById('uploadImage').click();">Upload new image</button>
+                        <input class="form-control" type="file" id="uploadImage" accept="image/*" onchange="loadFile(event)">
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-8">
+                <div class="card mb-4">
+                    <div class="card-header">Thông tin cá nhân chi tiết</div>
+                    <div class="card-body">
+                        <form>
+                            <div class="mb-3">
+                                <label class="small mb-1" for="inputFullName">Họ và tên</label>
+                                <input class="form-control" id="inputFullName" type="text" placeholder="Trần Trung Hiếu" value="">
+                            </div>
+                            <div class="mb-3">
+                                <label class="small mb-1" for="inputEmail">Email</label>
+                                <input class="form-control" id="inputEmail" type="email" placeholder="Enter your email address" value="name@example.com">
+                            </div>
+                            <div class="mb-3">
+                                <label class="small mb-1" for="inputPhone">Số điện thoại</label>
+                                <input class="form-control" id="inputPhone" type="tel" placeholder="Enter your phone number" value="0765721470">
+                            </div>
+                            <div class="mb-3">
+                                <label class="small mb-1" for="inputBirthday">Ngày sinh</label>
+                                <input class="form-control" id="inputBirthday" type="date" name="birthday" value="1988-06-10">
+                            </div>
+                            <div class="mb-3">
+                                <label class="small mb-1" for="inputGender">Giới tính</label>
+                                <select class="form-control" id="inputGender">
+                                    <option value="">Chọn giới tính</option>
+                                    <option value="male">Nam</option>
+                                    <option value="female">Nữ</option>
+                                    <option value="other">Khác</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label class="small mb-1" for="inputNationality">Quốc tịch</label>
+                                <input class="form-control" id="inputNationality" type="text" placeholder="Enter your nationality" value="">
+                            </div>
+                            <div class="mb-3">
+                                <label class="small mb-1" for="inputHometown">Quê quán</label>
+                                <input class="form-control" id="inputHometown" type="text" placeholder="Enter your hometown" value="">
+                            </div>
+                            <div class="mb-3">
+                                <label class="small mb-1" for="inputContactPage">Trang liên hệ</label>
+                                <input class="form-control" id="inputContactPage" type="url" placeholder="Enter your contact page" value="">
+                            </div>
+                            <div class="mb-3">
+                                <label class="small mb-1" for="inputSkills">Kỹ năng</label>
+                                <input class="form-control" id="inputSkills" type="text" placeholder="Enter your skills" value="">
+                            </div>
+                            <div class="mb-3">
+                                <label class="small mb-1" for="inputCompany">Công ty hiện tại</label>
+                                <input class="form-control" id="inputCompany" type="text" placeholder="Enter your current company" value="">
+                            </div>
+                            <div class="mb-3">
+                                <label class="small mb-1" for="inputDegree">Trình độ</label>
+                                <input class="form-control" id="inputDegree" type="text" placeholder="Enter your degree" value="">
+                            </div>
+                            <div class="mb-3">
+                                <label class="small mb-1" for="inputJobType">Loại công việc</label>
+                                <input class="form-control" id="inputJobType" type="text" placeholder="Enter your job type" value="">
+                            </div>
+                            <div class="mb-3">
+                                <label class="small mb-1" for="inputWorkFrom">Làm việc từ</label>
+                                <input class="form-control" id="inputWorkFrom" type="date" name="workFrom" value="">
+                            </div>
+                            <button class="btn btn-primary" type="submit">Save changes</button>
+                            <button class="btn btn-secondary" type="button" onclick="window.location.href='/'">Cancel</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
+<script type="text/javascript">
+    function loadFile(event) {
+        var image = document.getElementById('avatar');
+        image.src = URL.createObjectURL(event.target.files[0]);
+    }
+</script>
+</body>
+</html>
