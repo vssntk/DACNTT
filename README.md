@@ -10,7 +10,7 @@ Alumni Management Application Development
 ### B1: Clone project về máy
 
 ```
-git clone [https://github.com/vssntk/final-project.git]
+git clone https://github.com/vssntk/final-project.git
 ```
 
 !!! Lưu ý:
