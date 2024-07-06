@@ -1,4 +1,4 @@
-# final-project
+# Dự Án Công Nghệ Thông Tin
 Alumni Management Application Development
 
 ## Thông tin thành viên
