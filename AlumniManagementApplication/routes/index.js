@@ -242,8 +242,28 @@ router.get('/login', function (req, res, next) {
 //   }
 // })
 
-router.get('/sinhvien', function (req, res, next) {
+router.get('/student-info', function (req, res, next) {
   res.render('students-info')
-})
+});
+
+router.get('/company', function (req, res, next) {
+  res.render('company')
+});
+
+router.get('/suport', function (req, res, next) {
+  res.render('support')
+});
+
+router.get('/notification', function (req, res, next) {
+  res.render('notification')
+});
+
+router.get('/notification-detail', function (req, res, next) {
+  res.render('notificationDetail.ejs')
+});
+
+router.get('/job-detail', function (req, res, next) {
+  res.render('notificationDetail.ejs')
+});
 
 module.exports = router;

@@ -27,8 +27,6 @@ app.use(cookieParser());
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
-// app.use('/images', express.static(__dirname + '/public/images/'));
-// app.use('/stylesheets', express.static(__dirname + '/public/stylesheets/'));
 app.use(express.static(__dirname + '/public/'));
 
 //session

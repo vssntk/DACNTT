@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tin Tuyển Dụng</title>
+    <link rel="stylesheet" href="/stylesheets/company.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h2 class="section-title">DOANH NGHIỆP</h2>
+        <h1 class="section-subtitle">TIN TUYỂN DỤNG</h1>
+        <div class="job-section" id="job-section">
+            <div class="job-item">
+                <img src="https://via.placeholder.com/100" alt="Logo">
+                <div class="job-content">
+                    <a href="job-detail" class="job-title">Chương trình thực tập sinh tại Hoa kỳ</a>
+                    <div class="job-details">
+                        <span class="post-date">Đăng ngày: 20/05/2024</span><br>
+                        Đây là một trong những chính sách nhằm giúp sinh viên và lao động có tay nghề nâng cao trình độ chuyên môn, tích lũy kinh nghiệm và nâng cao khả năng sử dụng ngoại ngữ.
+                    </div>
+                </div>
+            </div>
+            <div class="job-item">
+                <img src="https://via.placeholder.com/100" alt="Logo">
+                <div class="job-content">
+                    <a href="job-detail" class="job-title">eCarAid thông báo tuyển dụng nhân sự</a>
+                    <div class="job-details">
+                        <span class="post-date">Đăng ngày: 03/05/2024</span><br>
+                        Vị trí tuyển dụng: dành cho sinh viên năm 4<br>
+                        Java (Spring boot): 5; React JS: 3; Flutter/Dark: 4; Swift: 2; Kotlin: 1; Software testers: 5; Business Analyst: 1;
+                    </div>
+                </div>
+            </div>
+            <div class="job-item">
+                <img src="https://via.placeholder.com/100" alt="Logo">
+                <div class="job-content">
+                    <a href="job-detail" class="job-title">Cty Công nghệ số Nam Phương tuyển dụng thực tập sinh</a>
+                    <div class="job-details">
+                        <span class="post-date">Đăng ngày: 03/03/2024</span><br>
+                        Thực tập sinh: Web Developer (ReactJS, Vite, Web API) và Business Analyst<br>
+                        Có định hướng phát triển lâu dài với công ty
+                    </div>
+                </div>
+            </div>
+            <div class="job-item">
+                <img src="https://via.placeholder.com/100" alt="Logo">
+                <div class="job-content">
+                    <a href="job-detail" class="job-title">Thực tập sinh có lương tại công ty phần mềm OPUS SOLUTION</a>
+                    <div class="job-details">
+                        <span class="post-date">Đăng ngày: 26/02/2024</span><br>
+                        - Số lượng: 10<br>
+                        - Phụ cấp: 1tr5<br>
+                        - Chuyên môn: Web, C++, Tester
+                    </div>
+                </div>
+            </div>
+            <div class="job-item">
+                <img src="https://via.placeholder.com/100" alt="Logo">
+                <div class="job-content">
+                    <a href="job-detail" class="job-title">FPT Software tuyển dụng Fresher.Net</a>
+                    <div class="job-details">
+                        <span class="post-date">Đăng ngày: 19/01/2024</span><br>
+                        Lương từ: 8.000.000 VNĐ – 15.000.000 VNĐ/tháng.<br>
+                        Nắm vững kiến thức lập trình cơ bản về ngôn .Net: Lập trình hướng đối tượng (OOP); C #, .Net, MVC, ASP.NET Core, ASP.NET API,...
+                    </div>
+                </div>
+            </div>
+            <div class="job-item">
+                <img src="https://via.placeholder.com/100" alt="Logo">
+                <div class="job-content">
+                    <a href="job-detail" class="job-title">Công ty Cổ Phần RYNAN Technologies Vietnam tuyển dụng</a>
+                    <div class="job-details">
+                        <span class="post-date">Đăng ngày: 03/01/2024</span><br>
+                        - Vị trí: IT System & Network Administrator - Số lượng: 02<br>
+                        - Địa chỉ: Long Đức, TP. Trà Vinh, tỉnh Trà Vinh
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="see-more" id="see-more">XEM THÊM >></a>
+        <div>
+            <h1 class="section-subtitle">DOANH NGHIỆP ĐÃ KÝ KẾT VỚI KHOA</h1>
+        </div>
+    </div>
+    <script>
+        document.getElementById('see-more').addEventListener('click', function(event) {
+            event.preventDefault();
+            
+            const jobSection = document.getElementById('job-section');
+        
+            // New job items to be added
+            const newJobs = [
+                {
+                    title: "Job Title 1",
+                    date: "15/07/2024",
+                    details: "Job details for job 1...",
+                    logo: "https://via.placeholder.com/100"
+                },
+                {
+                    title: "Job Title 2",
+                    date: "10/07/2024",
+                    details: "Job details for job 2...",
+                    logo: "https://via.placeholder.com/100"
+                },
+                {
+                    title: "Job Title 3",
+                    date: "05/07/2024",
+                    details: "Job details for job 3...",
+                    logo: "https://via.placeholder.com/100"
+                }
+            ];
+        
+            // Create and append new job items
+            newJobs.forEach(job => {
+                const jobItem = document.createElement('div');
+                jobItem.className = 'job-item';
+                jobItem.innerHTML = `
+                    <img src="${job.logo}" alt="Logo">
+                    <div class="job-content">
+                        <div class="job-title">${job.title}</div>
+                        <div class="job-details">
+                            <span class="post-date">Đăng ngày: ${job.date}</span><br>
+                            ${job.details}
+                        </div>
+                    </div>
+                `;
+                jobSection.appendChild(jobItem);
+            });
+        });        
+    </script>
+</body>
+</html>
