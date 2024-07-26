@@ -242,8 +242,8 @@ router.get('/login', function (req, res, next) {
 //   }
 // })
 
-router.get('/student-info', function (req, res, next) {
-  res.render('students-info')
+router.get('/info', function (req, res, next) {
+  res.render('info')
 });
 
 router.get('/company', function (req, res, next) {
